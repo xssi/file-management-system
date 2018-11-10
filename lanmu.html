@@ -1,0 +1,110 @@
+<link rel="stylesheet" href="bootstrap-3.3.0-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/comment.css">
+<script type="text/javascript" src="js/jquery-2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap-3.3.0-dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="iconfont1/iconfont.css">
+<script type="text/javascript" src="js/lanmu.js"></script>
+<style>
+	.main-content{
+		height: 800px;
+		background-color: #fff;
+		margin-top: 15px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		overflow: scroll;
+
+	}
+	button{
+		background-color: #68B828;
+		color: #fff;
+		margin-top: 15px;
+		margin-left: 10px;
+	}
+	.table{
+		text-align: center;
+		margin-top: 20px;
+	}
+	i.icon-xiugai,i.icon-lajitongshanchu{
+		font-size: 20px;
+		color: #666;
+
+	}
+	i.icon-lajitongshanchu{
+		font-size: 22px;
+
+	}
+	th{
+		text-align: center;
+		color: #666666;
+	}
+	.modal{
+		color: #666666;
+	}
+	.modal-header>span:nth-child(2){
+		margin-left: 70px;
+	}
+	#lanname,#desc,#parent{
+		width: 260px;
+		margin: 5px -2px;
+		border-radius: 3px;
+		border:1px solid #EDEDED ;
+	}
+</style>
+
+<div class="col-md-12 main-content">
+	<button class="btn newAdd">新增</button>
+	<button class="btn batchDelete">批量删除</button>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>编号</th>
+				<th>栏目名称</th>
+				<th>父栏目</th>
+				<th>描述</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr class="hidden">
+				<td><input type="checkbox" class="myCheck"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>
+					<i class="glyphicon glyphicon-pencil updata"></i>
+					&nbsp;&nbsp;&nbsp;
+					<i class="glyphicon glyphicon-trash deleteById"></i>
+				</td>
+			</tr>
+		
+		</tbody>
+	</table>
+	<div class="modal fade bs-example-modal-sm">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="hiddenId"></span>
+					<span class="close myClose">&times</span>
+					<span class="myTitle">添加栏目信息</span>
+				</div>
+				<div class="modal-body">
+					栏目名称<br>
+					<input type="text" id="lanname"><br>
+					描述<br>
+					<textarea id="desc"></textarea><br>
+					父栏目<br>
+					<select name="" id="parent">
+						<option value="">--请选择--</option>
+					</select>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-defalut myClose">取消</button>
+					<button class="btn confrim">确认</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+</div>

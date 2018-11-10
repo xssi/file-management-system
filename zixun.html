@@ -1,0 +1,143 @@
+<link rel="stylesheet" href="bootstrap-3.3.0-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/comment.css">
+<link rel="stylesheet" type="text/css" href="iconFont/iconfont.css">
+<script type="text/javascript" src="js/jquery-2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap-3.3.0-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/zixun.js"></script>
+
+<style>
+	.main-content{
+		height: 800px;
+		background-color: #fff;
+		margin-top: 15px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		overflow: scroll;
+	}
+	button{
+		background-color: #68B828;
+		color: #fff;
+		margin-top: 15px;
+		margin-left: 10px;
+	}
+	.table{
+		text-align: center;
+		margin-top: 20px;
+
+	}
+	th{
+		text-align: center;
+		color: #666666;
+	}
+	.modal{
+		color: #666666;
+	}
+	.modal-header>span:nth-child(2){
+		margin-left: 350px;
+	}
+	.modal-body>input,.modal-body>textarea,.modal-body>select{
+		width: 860px;
+		border:1px solid #EDEDED;
+		margin:8px -2px;
+	}
+	.modal-body>textarea{
+		height: 200px;
+	}
+	.modal-body>.lists{
+		width: 220px;
+		height: 90px;
+		border:1px solid #EDEDED;
+		border-radius: 4px;
+		float: left;
+	}
+	.modal-body>.rightlist{
+		margin-left: 30px;
+	}
+	.modal-body>.lists>img{
+		width: 200px;
+		height: 70px;
+		margin-top: 8px;
+		margin-left: 9px;
+	}
+	button.up{
+		width: 110px;
+		height: 40px;
+		margin:8px -2px;
+	}
+</style>
+
+<div class="col-md-12 main-content">
+	<button class="btn" id="newAdd">新增</button>
+	<button class="btn" id="batchDelete">批量删除</button>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>编号</th>
+				<th>文章标题</th>
+				<th>所属栏目</th>
+				<th>背景音乐</th>
+				<th>作者</th>
+				<th>发布时间</th>
+				<th>阅读次数</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="hidden">
+				<td><input type="checkbox" class="myCleck"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>
+					<i class="glyphicon glyphicon-pencil updata"></i>
+					&nbsp;&nbsp;&nbsp;
+					<i class="glyphicon glyphicon-trash deleteById"></i>
+				</td>
+			</tr>
+		</tbody>
+		
+		
+	</table>
+
+	<div class="modal fade bs-example-modal-lg">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span id="hiddenId"></span>
+					<span class="close myClose">&times</span>
+					<span class="myTitle">发布资讯</span>
+				</div>
+				<div class="modal-body">
+					标题<br>
+					<input type="text" id="title"><br>
+					所属栏目<br>
+					<select name="" id="category">
+						<option value="">--请选择--</option>
+					</select><br>
+					背景音乐<br>
+					<input type="text" id="music"><br>
+					作者<br>
+					<input type="text" id="author"><br>
+					列表样式<br>
+					<div class="lists">
+						<img src="images/u350.jpg" alt="">
+					</div>
+					<div class="lists rightlist">
+						<img src="images/u352.jpg" alt="">
+					</div><br><br><br><br><br>
+					列表缩略图<br>
+					<button class="btn up">点击上传</button><br>
+					正文<br>
+					<textarea></textarea>
+				</div>
+				<div class="modal-footer">
+					<button class="btn myClose btn-default">取消</button>
+					<button class="btn" id="release">发布</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

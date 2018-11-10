@@ -1,0 +1,120 @@
+<link rel="stylesheet" href="bootstrap-3.3.0-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/comment.css">
+<script type="text/javascript" src="js/jquery-2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap-3.3.0-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/user.js"></script>
+<style>
+	.main-content{
+		height: 800px;
+		background-color: #fff;
+		margin-top: 15px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		overflow: scroll;
+	}
+	button#newAdd{
+		width: 70px;
+		height: 30px;
+		position: absolute;
+		top:10px;
+		left: 10px;
+		background-color: #68B828;
+		color: #fff;
+		
+	}
+	#usercard{
+		margin-top: 20px;
+		width: 200px;
+		height: 280px;
+		float: left;
+		margin-top: 60px;
+		margin-left: 60px;
+		box-shadow: 2px 2px 4px #EDEDED,-2px 2px 4px #EDEDED,2px -2px 4px #EDEDED,-2px -2px 4px #EDEDED;
+	}
+	#usercard>img{
+		width: 113px;
+		height: 100px;
+		border-radius: 50%;
+		background-color: #ccc;
+		margin-left: 45px;
+		margin-top: 10px;
+	}
+	.usertable{
+		margin-top: 10px;
+		/* margin-left: 20px; */
+		color: #666666;
+	}
+	.usertable tr td{
+		padding-top: 10px;
+		padding-left: 20px;
+	}
+	.modal{
+		color: #666666;
+	}
+	.modal-header>span:nth-child(2){
+		margin-left: 70px;
+	}
+	.modal-body>input{
+		width: 260px;
+		margin: 5px -2px;
+		border-radius: 3px;
+		border:1px solid #EDEDED ;
+	}
+</style>
+
+<div class="col-md-12 main-content">
+	<button class="btn" id="newAdd">新增</button>
+	<div id="usercard" class="hidden">
+		<img src="" alt="">
+		<table class="usertable">
+			<tr class="hidden">
+				<td>id</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>用户名</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>真实姓名</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>email</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>状态</td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="modal fade bs-example-modal-sm">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close myClose">&times</span>
+					<span>添加用户</span>
+				</div>
+				<div class="modal-body">
+					用户名<br>
+					<input type="text" id="name" ><br>
+					密码<br>
+					<input type="password" id="pwd"><br>
+					重复密码<br>
+					<input type="password" id="repwd"><br>
+					真实姓名<br>
+					<input type="text" id="nickname"><br>
+					email<br>
+					<input type="text" id="email"><br>
+					
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-defalut myClose">取消</button>
+					<button class="btn btn-success" id="confrim">确认</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

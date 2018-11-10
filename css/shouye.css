@@ -1,0 +1,77 @@
+/*
+* @Author: sisi
+* @Date:   2018-09-26 19:15:21
+* @Last Modified by:   sisi
+* @Last Modified time: 2018-09-28 09:11:21
+*/
+.main-content{
+	height: 800px;
+	/* background-color: #fff; */
+	margin-top: 20px;
+	/* overflow: scroll; */
+}
+.container1{
+	width: 100%;
+}
+.leftcol{
+	height: 250px;
+
+}
+.leftcol>.row>.col-md-12{
+	height: 70px;
+	line-height: 70px;
+	margin-top: 20px;
+	background-color: #fff;
+}
+.leftcol>.row>.col-md-12:first-child{
+	margin-top: 0px;
+}
+.leftcol>.row>.col-md-12>img{
+	width: 45px;
+	height: 45px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 15px;
+}
+.leftcol>.row>.col-md-12>div{
+	width:120px;
+	height: 30px;
+	float: right;
+	margin-top: 15px;
+}
+
+.leftcol>.row>.col-md-12>div>h6{
+	color: #666;
+}
+.centercol{
+	height: 250px;
+	margin-left: 28px;
+}
+.rightcol{
+	height: 250px;
+	margin-left: 28px;
+}
+.rightcol>.row>.col-md-12{
+	height: 105px;
+}
+.rightcol>.row>.col-md-12:nth-child(2){
+	margin-top: 40px;
+}
+.container2{
+	width: 100%;
+	height: 400px;
+	margin-top: 280px;
+}
+.container2>.col-md-5,.container2>.col-md-6{
+	height: 100%;
+}
+.container2>.rightfive{
+	margin-left: 30px;
+}
+.container2>.rightfive>.row>.col-md-12{
+	height: 210px;
+}
+.container2>.rightfive>.row>.col-md-12:last-child{
+	height: 150px;
+	margin-top: 40px;
+}

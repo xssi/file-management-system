@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="iconFont/iconfont.css">
+	<script type="text/javascript" src="Highcharts-4.0.1/jquery-2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+
+	$(function(){
+		
+		var o={
+			name:"baobao",
+			comment:"这是个小宝宝",
+			no:1111
+		}
+		$.post("http://120.78.164.247:8099/manager/category/saveOrUpdateCategory",o,function(results){
+			console.log(results);
+		});
+		$.get("http://120.78.164.247:8099/manager/category/findAllCategory",function(results){
+			console.log(results);
+		});
+	})
+
+	</script>
+	<style type="text/css">
+	div{
+		width: 100px;
+		height: 100px;
+		background-color: blue;
+	}
+	i.icon-yun{
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		border: 1px solid red;
+		font-size: 30px;
+	}
+
+	</style>
+</head>
+<body>
+	<div>
+		iconfont图标
+		<i class="iconfont icon-yun"></i>
+	</div>
+</body>
+</html>
